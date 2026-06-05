@@ -9,7 +9,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-app.use(express.static(path.join(__dirname, "../frontend/dist")));
+app.use(express.static(path.join(__dirname, "dist")));
 
 const problems = [
   {
@@ -702,7 +702,7 @@ Keep it concise, beginner-friendly, and never give the solution directly. Max 15
 });
 
 app.use((req, res) => {
-  res.sendFile(path.join(__dirname, "../frontend/dist/index.html"));
+  res.sendFile(path.join(__dirname, "dist/index.html"));
 });
 
 app.listen(process.env.PORT || 5000, () => {
